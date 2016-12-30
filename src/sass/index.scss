@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+$view:75;
+
+// 字体用PX
+@mixin font-dpr($font-size){
+    font-size: $font-size;
+
+    [data-dpr="2"] & {
+        font-size: $font-size * 2;
+    }
+
+    [data-dpr="3"] & {
+        font-size: $font-size * 3;
+    }
+}
+
+.body{
+	@include font-dpr(16px);
+}
+
+
+body{
+	background: #f8f8f8; 
+	-webkit-overflow-scrolling:touch;
+}
+.g-body{
+	overflow: hidden;
+}
+/**
+ * 头部
+ */
+.g-header{
+	background: #fff;
+	height: 110rem/$view;
+	margin:12rem/$view 0;
+	padding: 0 20rem/$view; 
+	overflow: hidden;
+}
+.mkf-icon{
+	width: 50rem/$view;
+	height: 50rem/$view;
+	background: url('../images/mkfIcon.png') no-repeat center top;
+	background-size: 100% auto;
+	display: block;
+	float: left;
+	vertical-align: middle;
+	margin-top: 28rem/$view;
+}
+.header-title{
+	font-size: 26rem/$view;
+	line-height:110rem/$view;
+	float: left;
+	padding-left: 28rem/$view;
+	color: #1d1d1d;
+	font-weight: bold;
+	text-align: left;
+}
