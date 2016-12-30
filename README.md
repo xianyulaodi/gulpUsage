@@ -9,6 +9,7 @@
 3、打包到生产环境    gulp release
 
 可以在config里面修改自己的cdn路径
+
 可以在gulpfile.js里面修改输出路径
 
 对应的博客地址：http://www.cnblogs.com/xianyulaodi/p/6237655.html
